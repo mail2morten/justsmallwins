@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustSmallWins - The Architecture of Compounding Progress</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-win-500 selection:text-slate-950">
+
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-win-600 to-emerald-400 flex items-center justify-center text-slate-950 font-extrabold text-xl shadow-lg shadow-win-500/20">
+                        JSW
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-white">Just<span class="text-win-500">SmallWins</span></span>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                    <a href="#philosophy" class="hover:text-win-400 transition">Philosophy</a>
+                    <a href="#architecture" class="hover:text-win-400 transition">Life Architecture</a>
+                    <a href="#manifesto" class="hover:text-win-400 transition">Manifesto</a>
+                    <a href="#interactive" class="hover:text-win-400 transition">Win Tracker</a>
+                </nav>
+                <!-- CTA Action -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="#interactive" class="bg-win-600 hover:bg-win-500 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-win-600/20 transition transform active:scale-95">Log Your Win</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-400 hover:bg-slate-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-slate-900 border-b border-slate-800">
+            <a href="#philosophy" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800">Philosophy</a>
+            <a href="#architecture" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800">Life Architecture</a>
+            <a href="#manifesto" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800">Manifesto</a>
+            <a href="#interactive" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800">Win Tracker</a>
+            <div class="pt-2">
+                <a href="#interactive" class="w-full text-center block py-2.5 rounded-xl font-bold bg-win-500 text-slate-950 shadow-md">Log Your Win</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-24 pb-28 md:pt-36 md:pb-40 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 bg-win-950 border border-win-800/60 px-4 py-1.5 rounded-full text-win-400 text-xs sm:text-sm font-semibold mb-8 shadow-sm">
+                <span class="flex h-2 w-2 rounded-full bg-win-500 animate-ping"></span>
+                <span>Strip Away the Friction & Pressure</span>
+            </div>
+            <!-- Main Title -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-[1.15]">
+                The Absolute Distillation of <span class="bg-gradient-to-r from-win-400 to-emerald-200 bg-clip-text text-transparent">Total Autonomy</span>
+            </h1>
+            <!-- Subtitle -->
+            <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed">
+                You aren't agonizing over a massive ten-year plan. You are entirely focused on executing the immediate, present-tense action in front of you with complete transparency and integrity.
+            </p>
+            <!-- CTA Buttons -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#architecture" class="w-full sm:w-auto bg-win-600 hover:bg-win-500 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-win-600/20 transition transform hover:-translate-y-0.5">
+                    Explore Architecture
+                </a>
+                <a href="#interactive" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700 shadow-sm transition">
+                    Test the Micro-Win Engine
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-24 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-base font-semibold text-win-400 tracking-wide uppercase">Core Truth</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Why JustSmallWins Works
+                </p>
+                <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+                    It works so perfectly because it is a framework that applies seamlessly to every single layer of your life architecture without intimidation or burnout.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-win-400 font-semibold text-sm uppercase tracking-wider">Life Architecture</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Seamless Application Across All Layers
+                </h2>
+            </div>
+            <!-- Grid of 4 Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pillar 1: Mindset -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-win-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-win-950 text-win-400 flex items-center justify-center font-bold text-2xl mb-6 border border-win-800/40 group-hover:bg-win-600 group-hover:text-slate-950 transition">
+                        🛡️
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">The Stoic Mindset</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed">
+                        Purely Stoic approach. You aren't agonizing over a massive ten-year plan; you are entirely focused on executing the immediate, present-tense action in front of you with complete transparency and integrity.
+                    </p>
+                </div>
+                <!-- Pillar 2: Health Engine -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-win-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-win-950 text-win-400 flex items-center justify-center font-bold text-2xl mb-6 border border-win-800/40 group-hover:bg-win-600 group-hover:text-slate-950 transition">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">The Health Engine</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed">
+                        Takes anxiety out of the final goal. The focus shifts entirely to the neural wiring happening right now—getting through today's threshold run or logging intensity on the pitch. That physical victory primes your brain.
+                    </p>
+                </div>
+                <!-- Pillar 3: Tech & Workflows -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-win-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-win-950 text-win-400 flex items-center justify-center font-bold text-2xl mb-6 border border-win-800/40 group-hover:bg-win-600 group-hover:text-slate-950 transition">
+                        💻
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Tech & Agile Workflows</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed">
+                        The core truth of an Agile environment. You don't build the whole system at once. You ship an iteration, lock in a clean Tailwind layout, or configure one database trigger, compiling micro-wins into frictionless OS.
+                    </p>
+                </div>
+                <!-- Pillar 4: Wealth Foundation -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-win-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-win-950 text-win-400 flex items-center justify-center font-bold text-2xl mb-6 border border-win-800/40 group-hover:bg-win-600 group-hover:text-slate-950 transition">
+                        📈
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">The Wealth Foundation</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed">
+                        Whether optimizing property yield or structuring capital, financial independence isn't a single massive leap. It is the quiet, steady compounding of deliberate, small wins over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interactive" class="py-24 bg-slate-900/60 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-950 rounded-2xl border border-slate-800 p-8 sm:p-12 shadow-2xl">
+                <div class="text-center max-w-xl mx-auto">
+                    <span class="bg-win-950 text-win-400 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider border border-win-800/50">Micro-Win Protocol</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mt-4">Lock In Today's Small Win</h2>
+                    <p class="text-slate-400 text-sm mt-2">Log your present-tense execution. No massive burdens—just clear, compounding momentum.</p>
+                </div>
+
+                <div class="mt-8 space-y-4">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="text" id="win-input" placeholder="e.g., Shipped clean Tailwind header iteration..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-win-500 text-sm">
+                        <button onclick="addWin()" class="bg-win-600 hover:bg-win-500 text-slate-950 font-bold px-6 py-3 rounded-xl transition text-sm shadow-lg shadow-win-600/20">
+                            Log Win
+                        </button>
+                    </div>
+
+                    <!-- Win List container -->
+                    <div id="win-list" class="mt-6 space-y-3">
+                        <!-- Default mock items -->
+                        <div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl border border-slate-800/80">
+                            <span class="text-sm text-slate-300 font-medium">✓ Completed 20-minute threshold run to prime neural wiring</span>
+                            <span class="text-xs text-win-400 font-semibold bg-win-950 px-2.5 py-1 rounded-md">Health Engine</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl border border-slate-800/80">
+                            <span class="text-sm text-slate-300 font-medium">✓ Configured single database trigger and tested API response</span>
+                            <span class="text-xs text-win-400 font-semibold bg-win-950 px-2.5 py-1 rounded-md">Tech & Code</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="win-counter" class="mt-6 text-center text-xs text-slate-500 font-semibold uppercase tracking-wider">
+                    Total Compound Wins Logged Today: <span id="count-num" class="text-win-400 font-bold text-sm">2</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifesto" class="py-24 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-base font-semibold text-win-400 tracking-wide uppercase">Domain & Alias Vision</h2>
+            <blockquote class="mt-6 text-2xl sm:text-3xl font-medium text-slate-200 leading-relaxed">
+                "As a domain name (<span class="text-white font-bold underline decoration-win-500">justsmallwins.com</span>), a public alias, or the title of a philosophy you share with others, it is incredibly approachable. It invites people in without intimidating them, while secretly operating as a highly engineered blueprint for total autonomy and ease."
+            </blockquote>
+            <div class="mt-8">
+                <span class="text-sm font-bold text-slate-400 tracking-widest uppercase">— The JustSmallWins Blueprint</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-12">
+                <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                    <div class="w-10 h-10 rounded-xl bg-win-600 flex items-center justify-center text-slate-950 font-bold text-xl">
+                        JSW
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-white">Just<span class="text-win-500">SmallWins</span></span>
+                </div>
+                <div class="flex space-x-6 text-sm text-slate-400">
+                    <a href="#philosophy" class="hover:text-white transition">Philosophy</a>
+                    <a href="#architecture" class="hover:text-white transition">Architecture</a>
+                    <a href="#manifesto" class="hover:text-white transition">Manifesto</a>
+                    <a href="#interactive" class="hover:text-white transition">Tracker</a>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 JustSmallWins.com. All rights reserved. Zero friction, pure execution.</p>
+                <p class="mt-4 sm:mt-0">Built with pure HTML & Tailwind CSS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Win Logger
+        let winCount = 2;
+        function addWin() {
+            const input = document.getElementById('win-input');
+            const winList = document.getElementById('win-list');
+            const countNum = document.getElementById('count-num');
+
+            if (!input.value.trim()) return;
+
+            winCount++;
+            countNum.textContent = winCount;
+
+            const newWinCard = document.createElement('div');
+            newWinCard.className = "flex items-center justify-between p-4 bg-slate-900 rounded-xl border border-slate-800/80 animate-pulse";
+            newWinCard.innerHTML = `
+                <span class="text-sm text-slate-300 font-medium">✓ ${input.value.trim()}</span>
+                <span class="text-xs text-win-400 font-semibold bg-win-950 px-2.5 py-1 rounded-md">Micro-Win</span>
+            `;
+
+            winList.prepend(newWinCard);
+            input.value = '';
+
+            setTimeout(() => {
+                newWinCard.classList.remove('animate-pulse');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
